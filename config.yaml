@@ -1,0 +1,23 @@
+novel_title: "Conquest"
+novel_author: "Dancing"
+cover_image_url: "https://novelhi.s3.us-west-2.amazonaws.com/book_img/Conquest.JPEG"
+
+start_url: "https://novelhi.com/s/Conquest/1"
+
+page_loader: "requests" 
+
+next_chapter_selectors:
+  - type: "url_pattern"
+    pattern: "(\\d+)"
+    increment_by: 1
+
+consecutive_empty_chapters_threshold: 1
+
+content_selectors:
+  - type: "css_selector"
+    selector: "div#showReading"
+
+chapter_title_selector: .book_title > h1:nth-child(1)
+
+remove_elements:
+  - "div.ads"
